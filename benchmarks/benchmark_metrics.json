@@ -1,0 +1,90 @@
+{
+  "corpus_size": 10,
+  "verification_metrics": {
+    "reachability_accuracy_percent": 100.0,
+    "redundancy_accuracy_percent": 100.0,
+    "formal_proof_soundness": "100.0% (Z3 SMT Solver)"
+  },
+  "reachability_solver_latency_ms": {
+    "mean": 0.9748,
+    "median": 0.9125,
+    "p95": 1.6,
+    "max": 1.6
+  },
+  "redundancy_analysis_latency_ms": {
+    "mean": 0.8763,
+    "median": 0.0
+  },
+  "detailed_results": [
+    {
+      "policy": "AdministratorAccess_Wildcard",
+      "reachability_status": "REACHABLE (EXPLOIT)",
+      "reachability_time_ms": 1.6,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "ReadOnlyAccess_AllServices",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 0.872,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "S3_FullAccess_SingleBucket",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 0.875,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "Vulnerable_PrivilegeEscalation_PassRole",
+      "reachability_status": "REACHABLE (EXPLOIT)",
+      "reachability_time_ms": 0.95,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "Hardened_PassRole_WithConditions",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 0.78,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "ConfidentialS3_WithExplicitDeny",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 1.051,
+      "redundancy_time_ms": 6.974,
+      "has_redundancy": false
+    },
+    {
+      "policy": "DeadCode_CompletelyShadowedStatement",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 1.199,
+      "redundancy_time_ms": 1.789,
+      "has_redundancy": true
+    },
+    {
+      "policy": "SecurityAudit_ReadCompliance",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 0.744,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "DatabaseOperator_RDSLimited",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 1.002,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    },
+    {
+      "policy": "KMS_Decrypt_KeyScoped",
+      "reachability_status": "PROVEN_SAFE (UNSAT)",
+      "reachability_time_ms": 0.675,
+      "redundancy_time_ms": 0.0,
+      "has_redundancy": false
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smt-iam-policy-prover"
+version = "1.0.0"
+description = "Automated Formal Verification and Reachability Analysis of Multi-Cloud Access Control Policies using Microsoft Z3"
+readme = "README.md"
+authors = [
+    { name = "Md Habibur Rahaman Rana", email = "hrana36@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["formal-verification", "smt-solver", "z3", "cloud-security", "iam-policies", "least-privilege", "reachability-analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "z3-solver>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hrana36/smt-iam-policy-prover"
+"Bug Tracker" = "https://github.com/hrana36/smt-iam-policy-prover/issues"
